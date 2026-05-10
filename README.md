@@ -1,2 +1,2 @@
 # Cosmic-Diary
-A website to help people reconnect with their memories.
+A website that acts as a journal to write about daily plans, thoughts and feelings, and log the day through photos.
