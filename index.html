@@ -4,10 +4,83 @@
         <link rel="stylesheet" href="style.css"/>
     </head>
     <body style="background-color:black">
-        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-            <h1 style="color: white;">Click the spaceship to START</h1>
-            <img src="https://static.vecteezy.com/system/resources/previews/046/807/271/non_2x/pixel-art-illustration-space-background-pixelated-space-background-space-background-nebula-pixelated-for-the-pixel-art-game-and-icon-for-website-and-game-old-school-retro-vector.jpg"/>
-            <img src="https://png.pngtree.com/png-vector/20241217/ourmid/pngtree-cute-astronaut-in-rocket-ship-flying-through-space-with-stars-clipart-png-image_14788648.png" style="position: absolute; top: 250px; left: 550px; width: 250px;"/>
+        <div id="startScreen" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <h1 style="color: white; position: absolute; top: 10px; left: 500px;"><mark>Welcome to Cosmic Diary!</mark></h1>
+            <h4 style="color: white; position: absolute; top: 50px; left: 180px; width: 1000px; text-align: center;"><mark>A personal space-themed journal where you can write about your daily plans, thoughts and feelings, and log your day through photos, all from the comfort of your own spaceship.</mark></h4>
+            <h3 style="color: white; position: absolute; top: 200px; left: 570px; width: 250px;">Click the spaceship to START</h3>
+            <img src="https://static.vecteezy.com/system/resources/previews/046/807/271/non_2x/pixel-art-illustration-space-background-pixelated-space-background-space-background-nebula-pixelated-for-the-pixel-art-game-and-icon-for-website-and-game-old-school-retro-vector.jpg">
+            <img id="astronaut" class="spaceship" src="https://png.pngtree.com/png-vector/20241217/ourmid/pngtree-cute-astronaut-in-rocket-ship-flying-through-space-with-stars-clipart-png-image_14788648.png" onclick="changeScreen('startScreen', 'menu')" alt="astronaut" style="position: absolute; top: 250px; left: 550px; width: 250px; cursor: pointer;"/>
         </div>
+       
+        <div id="menu" style="display: none; flex-direction: column; align-items: center; justify-content: center;">
+            <h1 style="color: white; position: absolute; top: -6px; left: 450px;">Select what you would like to do</h1>
+            <img src="https://cdn.vectorstock.com/i/500p/05/88/spaceship-interior-empty-window-vector-22710588.jpg">
+            <img class="orangePlanet" src="https://cdn.creazilla.com/cliparts/7821433/planet-clipart-original.png" onclick="changeScreen('menu', 'plannerPage')" style="position: absolute; top: 250px; left: 200px; width: 250px; cursor: pointer;">
+            <p style="position: absolute; top: 420px; left: 275px; color: white;">Daily Planner</p>
+            <img class="bluePlanet" src="https://www.publicdomainpictures.net/pictures/420000/nahled/planet-kugel-ball-clipart-1632687999J6w.png" onclick="changeScreen('menu', 'thoughtsPage')" style="position: absolute; top: 225px; left: 575px; width: 190px; cursor: pointer;">
+            <p style="position: absolute; top: 420px; left: 595px; color: white;">Thoughts and Feelings</p>
+            <img class="redPlanet" src="https://spaces-cdn.clipsafari.com/r8x7ur0xee4gw4lpdwyffu32h5b1" onclick="changeScreen('menu', 'picturesPage')" style="position: absolute; top: 245px; left: 940px; width: 160px; cursor: pointer;">
+            <p style="position: absolute; top: 420px; left: 975px; color: white;">Picture Album</p>
+        </div>
+
+        <div id="plannerPage" style="display: none; flex-direction: column; align-items: center; justify-content: center; background-color:rgb(251, 251, 251);">
+            <img src="https://images-ext-1.discordapp.net/external/jSOVE30Y7bVh-S_yrW6g1Nhna7-gvJaT3et3QqpxRAU/https/marketplace.canva.com/EAFj6Amd_DI/2/0/1131w/canva-beige-and-brown-simple-daily-planner-a4-document-BZWuB4iemS0.jpg" style="width: 430px;">
+            <textarea placeholder="Write your schedule here..." style="position: absolute; top: 163px; left: 540px; width: 115px; height: 240px; background: rgb(239, 239, 223); color: rgb(0, 0, 0); border: 1px solid rgb(239, 239, 223); font-size: 10px;"></textarea>
+            <textarea placeholder="Write what you're grateful for here..." style="position: absolute; top: 450px; left: 500px; width: 170px; height: 120px; background: rgb(251, 251, 251); color: rgb(0, 0, 0); border: 1px solid rgb(251, 251, 251); font-size: 10px;"></textarea>
+            <textarea placeholder="Write your to do list here..." style="position: absolute; top: 315px; left: 710px; width: 115px; height: 100px; background: rgb(239, 239, 223); color: rgb(0, 0, 0); border: 1px solid rgb(239, 239, 223); font-size: 10px;"></textarea>
+            <textarea placeholder="Write notes here..." style="position: absolute; top: 480px; left: 700px; width: 130px; height: 80px; background: rgb(239, 239, 223); color: rgb(0, 0, 0); border: 1px solid rgb(239, 239, 223); font-size: 10px;"></textarea>
+            <textarea placeholder="Write your priorities here..." style="position: absolute; top: 150px; left: 700px; width: 130px; height: 115px; background: rgb(251, 251, 251); color: rgb(0, 0, 0); border: 1px solid rgb(251, 251, 251); font-size: 10px;"></textarea>
+            <textarea placeholder="Write the date..." style="position: absolute; top: 103px; left: 710px; width: 115px; height: 10px; background: rgb(239, 239, 223); color: rgb(0, 0, 0); border: 1px solid rgb(239, 239, 223); font-size: 10px;"></textarea>
+            <div class="circle" style="position: absolute; top: 105px; left: 500px; width: 15px; height: 15px; border: 2px solid black; border-radius: 50%; background: transparent;" draggable="true" alt="Moveable Image"></div>
+            <button onclick="changeScreen('plannerPage', 'menu')" style="color: black; background: rgb(239, 239, 223); padding: 10px; margin-top: 10px; cursor: pointer;">Back</button>
+        </div>
+
+        <div id="thoughtsPage" style="display: none; flex-direction: column; align-items: center; justify-content: center; background-color:rgb(254, 236, 254);">
+            <img src="https://images-ext-1.discordapp.net/external/QmxkG_0mkAA-MDYftL810xLVL5MJP4lGjuTX79C__GE/https/blog.planwiz.app/wp-content/uploads/2025/04/mood-tracker-template-for-mental-health-support.png" style="width: 400px;">
+            <textarea placeholder="Write what you did today here..." style="position: absolute; top: 150px; left: 490px; width: 180px; height: 340px; background: white; color: rgb(0, 0, 0); border: 1px solid white; font-size: 10px;"></textarea>
+            <textarea placeholder="Write the date..." style="position: absolute; top: 78px; left: 520px; width: 120px; height: 10px; background: rgb(254, 236, 254); color: rgb(0, 0, 0); border: 1px solid rgb(254, 236, 254); font-size: 10px;"></textarea>
+            <button onclick="changeScreen('thoughtsPage', 'menu')" style="color: black; background: rgb(248, 213, 241); padding: 10px; margin-top: 10px; cursor: pointer;">Back</button>
+        </div>
+
+        <div id="picturesPage" style="display: none; flex-direction: column; align-items: center; justify-content: center;">
+            <h1 style="color: white;">Picture Album</h1>
+            <video id="video" autoplay></video>
+            <button id="snap" style="color: white; background: transparent; border: 1px solid white; padding: 10px; margin-top: 10px; cursor: pointer;">Take Photo</button>
+            <canvas id="canvas" width="640" height="480" style="display:none;"></canvas>
+            <img id="photo" style="display: none; width: 640px;" alt="The screen capture will appear in this box.">
+            <button onclick="changeScreen('picturesPage', 'menu')" style="color: white; background: transparent; border: 1px solid white; padding: 10px; margin-top: 10px; cursor: pointer;">Back</button>
+        </div>
+
+        <script>
+            function changeScreen(hideId, showId) {
+                document.getElementById(hideId).style.display = 'none';
+                document.getElementById(showId).style.display = 'flex';
+            }
+        const video = document.getElementById('video');
+        navigator.mediaDevices.getUserMedia({ video: true, audio: false })
+            .then((stream) => {
+                video.srcObject = stream;
+            })
+            .catch((err) => {
+                console.error("Error accessing camera: " + err);
+            });
+        const canvas = document.getElementById('canvas');
+        const photo = document.getElementById('photo');
+        const snap = document.getElementById('snap');
+
+        snap.addEventListener('click', () => {
+            const context = canvas.getContext('2d');
+            context.drawImage(video, 0, 0, 640, 480);
+            const data = canvas.toDataURL('image/png');
+            photo.setAttribute('src', data);
+            photo.style.display = 'block';
+            video.style.display = 'none';
+            snap.style.display = 'none';
+            const stream = video.srcObject;
+            stream.getTracks().forEach(track => track.stop());
+        });
+
+        loadJournal();
+        </script>
     </body>
 </html>

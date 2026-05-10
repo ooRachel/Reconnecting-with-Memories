@@ -1,3 +1,37 @@
+mark {
+  background-color: black;
+  color: white;
+}
+
+textarea{
+    line-height: 1.8;
+    padding-top: 2px;
+}
+
 img{
     width: 100%;
+}
+img.spaceship:hover{
+    transform: scale(1.1) rotate(5deg);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+img.orangePlanet:hover{
+    transform: scale(1.1) rotate(5deg);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+img.bluePlanet:hover{
+    transform: scale(1.1) rotate(5deg);
+    transition: 0.3s;
+    cursor: pointer;
+
+}
+
+img.redPlanet:hover{
+    transform: scale(1.1) rotate(5deg);
+    transition: 0.3s;
+    cursor: pointer;
 }
