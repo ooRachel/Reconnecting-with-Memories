@@ -10,6 +10,16 @@
             <h3 style="color: white; position: absolute; top: 200px; left: 570px; width: 250px;">Click the spaceship to START</h3>
             <img src="https://static.vecteezy.com/system/resources/previews/046/807/271/non_2x/pixel-art-illustration-space-background-pixelated-space-background-space-background-nebula-pixelated-for-the-pixel-art-game-and-icon-for-website-and-game-old-school-retro-vector.jpg">
             <img class="spaceship" src="https://png.pngtree.com/png-vector/20241217/ourmid/pngtree-cute-astronaut-in-rocket-ship-flying-through-space-with-stars-clipart-png-image_14788648.png" onclick="changeScreen('startScreen', 'menu')" alt="astronaut" style="position: absolute; top: 250px; left: 550px; width: 250px; cursor: pointer;"/>
+            <button onclick="changeScreen('startScreen', 'creditsPage')" style="color: white; background: black; padding: 10px; margin-top: 10px; cursor: pointer; position: absolute; top: 530px; left: 650px;">Credits!</button>
+        </div>
+
+        <div id="creditsPage" style="display: none; flex-direction: column; align-items: center; justify-content: center; background-color: black;">
+            <h1 style="color: gold;">Credits</h1>
+            <p style="color: white;">Created by: <strong>Rachel Liu and Prarthana Praveen</strong></p>
+            <p style="color: white;">Built with: HTML, CSS, and JavaScript</p>
+            <p style="color: white;">Images: Vecteezy, Pngtree, FAVPNG, Creazilla, Canva, and Planwiz</p>
+            <p style="color: white;">Camera code: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos" style="color: blue;">https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos</a></p>
+            <button onclick="changeScreen('creditsPage', 'startScreen')" style="color: white; background: black; padding: 10px; margin-top: 10px; cursor: pointer;">Back</button>
         </div>
        
         <div id="menu" style="display: none; flex-direction: column; align-items: center; justify-content: center;">
